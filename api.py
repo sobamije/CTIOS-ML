@@ -5,7 +5,7 @@ import joblib, numpy as np, pandas as pd
 
 app = FastAPI(title="CTIOS Enrollment Risk API", version="3.0.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
-model = joblib.load("/Users/sophiaobamije/ctios-ml/real_model.pkl")
+model = joblib.load("real_model.pkl")
 
 class TrialInput(BaseModel):
     phase: str = "PHASE2"
